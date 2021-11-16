@@ -4,7 +4,7 @@
   "description": "Anime Server for ADBMS Assignment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/dsdevi/anime-server/issues"
   },
-  "homepage": "https://github.com/dsdevi/anime-server#readme"
+  "homepage": "https://github.com/dsdevi/anime-server#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13",
+    "nodemon": "^2.0.15"
+  }
 }
