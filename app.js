@@ -10,11 +10,15 @@ const showRoutes = require("./routes/showRoute");
 const movieRoutes = require("./routes/movieRoute");
 const userRoutes = require("./routes/userRoute");
 const adminRoutes = require("./routes/adminRoute");
+const ovaRoutes = require("./routes/ovaRoute");
+const specialRoutes = require("./routes/specialRoute");
 
 app.use("/show", showRoutes);
 app.use("/movie", movieRoutes);
 app.use("/user", userRoutes);
 app.use("/admin", adminRoutes);
+app.use("/ova", ovaRoutes);
+app.use("/special", specialRoutes);
 
 //connect to MongoDB
 mongoose
