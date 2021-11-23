@@ -3,6 +3,7 @@ const router = express.Router();
 
 const Movie = require("../models/Movie");
 
+//CREATE
 router.post("/add", (req, res) => {
   const newMovie = new Movie({
     anime_id: req.body.anime_id,
@@ -29,6 +30,30 @@ router.post("/add", (req, res) => {
 
   newMovie
     .save()
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//READ
+//accessed by localhost:3000/movie with GET method
+router.get("/", (req, res) => {
+  Movie.find()
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//UPDATE
+//accessed by localhost:3000/movie/update/ANIMEID with PUT method
+router.put("/update/:animeId", (req, res) => {
+  Movie.updateOne({ anime_id: req.params.animeId }, { ...req.body })
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//DELETE
+//accessed by localhost:3000/movie/delete/ANIMEID with DELETE method
+router.delete("/delete/:animeId", (req, res) => {
+  Movie.deleteOne({ anime_id: req.params.animeId })
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
 });
