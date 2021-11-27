@@ -38,7 +38,7 @@ router.get('/', (req, res) => {
 });
 
 //READ ONE
-//accessed by localhost:3000/ova/title with GET method
+//accessed by localhost:3000/special/title with GET method
 
 router.get("/:title", (req, res) => {
 	Special.findOne({ title: req.params.title })
