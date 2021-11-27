@@ -38,7 +38,7 @@ router.post("/add", (req, res) => {
 //READ
 //accessed by localhost:3000/ova with GET method
 router.get("/", (req, res) => {
-  Ova.find()
+  OVA.find()
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
 });
@@ -47,7 +47,7 @@ router.get("/", (req, res) => {
 //accessed by localhost:3000/ova/title with GET method
 
 router.get("/:title", (req, res) => {
-  Ova.findOne({ title: req.params.title })
+  OVA.findOne({ title: req.params.title })
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
 });
@@ -55,7 +55,7 @@ router.get("/:title", (req, res) => {
 //UPDATE
 //accessed by localhost:3000/ova/update/anime_id with PUT method
 router.put("/update/:animeId", (req, res) => {
-  Ova.updateOne({ anime_id: req.params.animeId }, { ...req.body })
+  OVA.updateOne({ anime_id: req.params.animeId }, { ...req.body })
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
 });
@@ -63,7 +63,7 @@ router.put("/update/:animeId", (req, res) => {
 //DELETE
 //accessed by localhost:3000/ova/delete/anime_id with DELETE method
 router.delete("/delete/:animeId", (req, res) => {
-  Ova.deleteOne({ anime_id: req.params.animeId })
+  OVA.deleteOne({ anime_id: req.params.animeId })
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
 });
