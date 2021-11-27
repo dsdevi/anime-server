@@ -3,6 +3,7 @@ const router = express.Router();
 
 const OVA = require("../models/OVA");
 
+//CREATE
 router.post("/add", (req, res) => {
   const newOVA = new OVA({
     anime_id: req.body.anime_id,
@@ -30,6 +31,39 @@ router.post("/add", (req, res) => {
 
   newOVA
     .save()
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//READ
+//accessed by localhost:3000/ova with GET method
+router.get("/", (req, res) => {
+  Ova.find()
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//READ ONE
+//accessed by localhost:3000/ova/title with GET method
+
+router.get("/:title", (req, res) => {
+  Ova.findOne({ title: req.params.title })
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//UPDATE
+//accessed by localhost:3000/ova/update/anime_id with PUT method
+router.put("/update/:animeId", (req, res) => {
+  Ova.updateOne({ anime_id: req.params.animeId }, { ...req.body })
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//DELETE
+//accessed by localhost:3000/ova/delete/anime_id with DELETE method
+router.delete("/delete/:animeId", (req, res) => {
+  Ova.deleteOne({ anime_id: req.params.animeId })
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
 });
