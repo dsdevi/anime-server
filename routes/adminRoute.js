@@ -17,4 +17,38 @@ router.post("/add", (req, res) => {
     .catch((err) => res.json(err));
 });
 
+//READ
+//accessed by localhost:3000/admin with GET method
+
+router.get("/", (req, res) => {
+  Admin.find()
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//READ ONE
+//accessed by localhost:3000/admin/username with GET method
+
+router.get("/:username", (req, res) => {
+  Admin.findOne({ username: req.params.username })
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//DELETE
+//accessed by localhost:3000/admin/delete/username with DELETE method
+router.delete("/delete/:username", (req, res) => {
+  Admin.deleteOne({ username: req.params.username })
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//UPDATE
+//accessed by localhost:3000/anime/update/username with PUT method
+router.put("/update/:username", (req, res) => {
+  Admin.updateOne({ username: req.params.username }, { ...req.body })
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
 module.exports = router;
