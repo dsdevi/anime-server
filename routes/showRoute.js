@@ -46,6 +46,15 @@ router.get("/", (req, res) => {
     .catch((err) => res.json(err));
 });
 
+//READ ONE
+//accessed by localhost:3000/ova/title with GET method
+
+router.get("/:title", (req, res) => {
+  Show.findOne({ title: req.params.title })
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
 //UPDATE
 //accessed by localhost:3000/show/update/ANIMEID with PUT method
 router.put("/update/:animeId", (req, res) => {
