@@ -44,7 +44,7 @@ router.delete("/delete/:username", (req, res) => {
 });
 
 //UPDATE
-//accessed by localhost:3000/anime/update/username with PUT method
+//accessed by localhost:3000/admin/update/username with PUT method
 router.put("/update/:username", (req, res) => {
   Admin.updateOne({ username: req.params.username }, { ...req.body })
     .then((data) => res.json(data))
