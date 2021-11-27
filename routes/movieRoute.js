@@ -42,6 +42,15 @@ router.get("/", (req, res) => {
     .catch((err) => res.json(err));
 });
 
+//READ ONE
+//accessed by localhost:3000/movie/title with GET method
+
+router.get("/:title", (req, res) => {
+  Movie.findOne({ title: req.params.title })
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
 //UPDATE
 //accessed by localhost:3000/movie/update/ANIMEID with PUT method
 router.put("/update/:animeId", (req, res) => {
