@@ -47,10 +47,44 @@ router.get("/", (req, res) => {
 });
 
 //READ ONE
-//accessed by localhost:3000/show/title with GET method
-
-router.get("/:title", (req, res) => {
+//accessed by localhost:3000/show/title/TITLE_NAME with GET method
+router.get("/title/:title", (req, res) => {
   Show.findOne({ title: req.params.title })
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//FILTER WHERE SCORE > X (example of a score: 6.78)
+//accessed by localhost:3000/show/score/SCORE_VALUE with GET method
+router.get("/score/:score", (req, res) => {
+  console.log("test");
+  console.log(typeof req.params.score);
+  Show.find({ score: { $gte: req.params.score } })
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//FILTER BY STUDIO (example: "Madhouse")
+//accessed by localhost:3000/show/studio/STUDIO_NAME with GET method
+router.get("/studio/:studio", (req, res) => {
+  Show.find({ studio: req.params.studio })
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//GET ALL Show SORTED BY POPULARITY
+//accessed by localhost:3000/show/popularity with GET method
+router.get("/popularity", (req, res) => {
+  Show.find()
+    .sort({ popularity: 1 })
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//GET ALL Show WHICH HAVE FINISHED AIRING
+//accessed by localhost:3000/show/airing with GET method
+router.get("/airing", (req, res) => {
+  Show.find({ airing: false })
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
 });
