@@ -52,6 +52,15 @@ router.get("/:title", (req, res) => {
     .catch((err) => res.json(err));
 });
 
+//FILTER WHERE RATING > X
+
+router.get("/:rating", (req, res) => {
+  OVA.find({ rating: { $gte: req.params.rating } })
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+
 //UPDATE
 //accessed by localhost:3000/ova/update/anime_id with PUT method
 router.put("/update/:animeId", (req, res) => {
