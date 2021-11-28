@@ -37,6 +37,15 @@ router.get('/', (req, res) => {
 	Special.find().then((data) => res.json(data)).catch((err) => res.json(err));
 });
 
+//READ ONE
+//accessed by localhost:3000/special/title with GET method
+
+router.get("/:title", (req, res) => {
+	Special.findOne({ title: req.params.title })
+	  .then((data) => res.json(data))
+	  .catch((err) => res.json(err));
+  });
+
 //UPDATE
 //accessed by localhost:3000/special/update/SHOWID with PUT method
 router.put('/update/:showId', (req, res) => {

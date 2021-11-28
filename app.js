@@ -2,8 +2,12 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 require("dotenv/config");
+var CronJob = require('cron').CronJob;
 
 app.use(express.json());
+
+//import simulation code
+const autoCreate = require("./inputstream/autocreate");
 
 //import routes
 const showRoutes = require("./routes/showRoute");
@@ -26,5 +30,17 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 
-//listen to the server
+//simulate creation stream
+var i = 0;
+
+var job = new CronJob('0 * * * * *', function() {
+  autoCreate(i);
+  i = (i+1)%5;
+  console.log('~~~Anime creation input simulated for every minute~~~');
+}, null, true, 'America/New_York');
+
+job.start();
+
+
+  //listen to the server
 app.listen(3000);

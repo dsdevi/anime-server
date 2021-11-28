@@ -1,0 +1,10 @@
+###
+GET http://localhost:3000/movie
+
+###
+
+GET http://localhost:3000/movie/TEST_2
+
+###
+
+DELETE http://localhost:3000/movie/delete/77777

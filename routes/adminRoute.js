@@ -27,7 +27,7 @@ router.get("/", (req, res) => {
 });
 
 //READ ONE
-//accessed by localhost:3000/admin/username with GET method
+//accessed by localhost:3000/admin/USERNAME with GET method
 
 router.get("/:username", (req, res) => {
   Admin.findOne({ username: req.params.username })
@@ -36,7 +36,7 @@ router.get("/:username", (req, res) => {
 });
 
 //DELETE
-//accessed by localhost:3000/admin/delete/username with DELETE method
+//accessed by localhost:3000/admin/delete/USERNAME with DELETE method
 router.delete("/delete/:username", (req, res) => {
   Admin.deleteOne({ username: req.params.username })
     .then((data) => res.json(data))
@@ -44,7 +44,7 @@ router.delete("/delete/:username", (req, res) => {
 });
 
 //UPDATE
-//accessed by localhost:3000/admin/update/username with PUT method
+//accessed by localhost:3000/admin/update/USERNAME with PUT method
 router.put("/update/:username", (req, res) => {
   Admin.updateOne({ username: req.params.username }, { ...req.body })
     .then((data) => res.json(data))

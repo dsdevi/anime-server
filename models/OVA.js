@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const OVASchema = mongoose.Schema({
-  anime_id: Number,
+  anime_id: {type: Number, unique: true},
   title: String,
   image_url: String,
   type: String,
