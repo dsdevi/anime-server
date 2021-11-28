@@ -8,9 +8,13 @@ router.post("/add", (req, res) => {
   const newUser = new User({
     username: req.body.username,
     password: req.body.password,
+    showsCompleted: req.body.showsCompleted,
+    gender: req.body.gender,
     location: req.body.location,
-    preferences: req.body.preferences,
+    birthDate: req.body.birthDate,
     joined: Date.now(),
+    meanScore: req.body.meanScore,
+    episodesWatched: req.body.episodesWatched,
   });
 
   newUser
@@ -18,7 +22,6 @@ router.post("/add", (req, res) => {
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
 });
-
 
 //READ
 //accessed by localhost:3000/user with GET method

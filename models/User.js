@@ -3,10 +3,13 @@ const mongoose = require("mongoose");
 const UserSchema = mongoose.Schema({
   username: String,
   password: String,
+  showsCompleted: Number,
+  gender: String,
   location: String,
-  preferences: [String],
+  birthDate: Date,
   joined: Date,
-  ratings: [{ type: Map, of: mongoose.SchemaTypes.Mixed }],
+  meanScore: Number,
+  episodesWatched: Number,
 });
 
 module.exports = mongoose.model("User", UserSchema);
