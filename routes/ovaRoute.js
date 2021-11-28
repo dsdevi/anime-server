@@ -10,7 +10,7 @@ router.post("/add", (req, res) => {
     title: req.body.title,
     image_url: req.body.image_url,
     source: req.body.source,
-    episodes:req.body.episodes,
+    episodes: req.body.episodes,
     status: req.body.status,
     airing: req.body.airing,
     aired: req.body.aired,
@@ -44,24 +44,26 @@ router.get("/", (req, res) => {
 });
 
 //READ ONE
-//accessed by localhost:3000/ova/title with GET method
-router.get("/:title", (req, res) => {
+//accessed by localhost:3000/ova/title/TITLE_NAME with GET method
+router.get("/title/:title", (req, res) => {
   OVA.findOne({ title: req.params.title })
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
 });
 
 //FILTER WHERE SCORE > X (example of a score: 6.78)
-//accessed by localhost:3000/ova/score with GET method
-router.get("/:score", (req, res) => {
-  OVA.find({ score: { $gte: req.params.score } }) 
+//accessed by localhost:3000/ova/score/SCORE_VALUE with GET method
+router.get("/score/:score", (req, res) => {
+  console.log("test");
+  console.log(typeof req.params.score);
+  OVA.find({ score: { $gte: req.params.score } })
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
 });
 
 //FILTER BY STUDIO (example: "Madhouse")
-//accessed by localhost:3000/ova/studio with GET method
-router.get("/:studio", (req, res) => {
+//accessed by localhost:3000/ova/studio/STUDIO_NAME with GET method
+router.get("/studio/:studio", (req, res) => {
   OVA.find({ studio: req.params.studio })
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
@@ -69,15 +71,16 @@ router.get("/:studio", (req, res) => {
 
 //GET ALL OVA SORTED BY POPULARITY
 //accessed by localhost:3000/ova/popularity with GET method
-router.get("/:popularity", (req, res) => {
-  OVA.find().sort({"popularity":1})
+router.get("/popularity", (req, res) => {
+  OVA.find()
+    .sort({ popularity: 1 })
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
 });
 
 //GET ALL OVA WHICH HAVE FINISHED AIRING
 //accessed by localhost:3000/ova/airing with GET method
-router.get("/:airing", (req, res) => {
+router.get("/airing", (req, res) => {
   OVA.find({ airing: false })
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
