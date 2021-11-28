@@ -40,11 +40,9 @@ router.get('/', (req, res) => {
 //READ ONE
 //accessed by localhost:3000/special/title with GET method
 
-router.get("/:title", (req, res) => {
-	Special.findOne({ title: req.params.title })
-	  .then((data) => res.json(data))
-	  .catch((err) => res.json(err));
-  });
+router.get('/:title', (req, res) => {
+	Special.findOne({ title: req.params.title }).then((data) => res.json(data)).catch((err) => res.json(err));
+});
 
 //UPDATE
 //accessed by localhost:3000/special/update/SHOWID with PUT method
@@ -58,6 +56,30 @@ router.put('/update/:showId', (req, res) => {
 //accessed by localhost:3000/special/delete/SHOWID with DELETE method
 router.delete('/delete/:showId', (req, res) => {
 	Special.deleteOne({ anime_id: req.params.showId }).then((data) => res.json(data)).catch((err) => res.json(err));
+});
+
+//FILTER WHERE SCORE > X (example of a score: 7.9)
+//accessed by localhost:3000/special/score with GET method
+router.get('/:score', (req, res) => {
+	Special.find({ score: { $gte: req.params.score } }).then((data) => res.json(data)).catch((err) => res.json(err));
+});
+
+//FILTER BY STUDIO (example: "Madhouse")
+//accessed by localhost:3000/special/studio with GET method
+router.get('/:studio', (req, res) => {
+	Special.find({ studio: req.params.studio }).then((data) => res.json(data)).catch((err) => res.json(err));
+});
+
+//GET ALL Special SORTED BY POPULARITY
+//accessed by localhost:3000/special/popularity with GET method
+router.get('/:popularity', (req, res) => {
+	Special.find().sort({ popularity: 1 }).then((data) => res.json(data)).catch((err) => res.json(err));
+});
+
+//GET ALL Special WHICH HAVE FINISHED AIRING
+//accessed by localhost:3000/special/airing with GET method
+router.get('/:airing', (req, res) => {
+	Special.find({ airing: false }).then((data) => res.json(data)).catch((err) => res.json(err));
 });
 
 module.exports = router;
