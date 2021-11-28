@@ -1,6 +1,6 @@
 const ovaJSON = [
     {
-        "anime_id": 16642,
+        "anime_id": 40005,
         "title": "Ane Koi: Suki Kirai Daisuki.",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/5/47029.jpg",
         "source": "Manga",
@@ -23,7 +23,7 @@ const ovaJSON = [
         "ending_theme": []
       },
       {
-        "anime_id": 9389,
+        "anime_id": 40006,
         "title": "Ginga Hyouryuu Vifam: Kieta 12-nin",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/11/59747.jpg",
         "source": "Unknown",
@@ -46,7 +46,7 @@ const ovaJSON = [
         "ending_theme": []
       },
       {
-        "anime_id": 34152,
+        "anime_id": 40007,
         "title": "Super Danganronpa 2.5: Komaeda Nagito to Sekai no Hakaimono",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/10/83150.jpg",
         "source": "Original",
@@ -69,7 +69,7 @@ const ovaJSON = [
         "ending_theme": []
       },
       {
-        "anime_id": 9998,
+        "anime_id": 40008,
         "title": "Chuuhai Lemon: Love 30s - Ame ni Nurete mo",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/6/27716.jpg",
         "source": "Unknown",
@@ -92,7 +92,7 @@ const ovaJSON = [
         "ending_theme": []
       },
       {
-        "anime_id": 27417,
+        "anime_id": 40009,
         "title": "Diabolik Lovers OVA",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/12/74238.jpg",
         "source": "Visual novel",

@@ -1,6 +1,6 @@
 const movieJSON = [
     {
-        "anime_id": 33185,
+        "anime_id": 40000,
         "title": "Peace Maker Kurogane Movie 1: Omou Michi",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/1379/91338.jpg",
         "source": "Manga",
@@ -22,7 +22,7 @@ const movieJSON = [
         "ending_theme": ["Rust by THE JETZEJOHNSON (ジェッジジョンソン)"]
       },
       {
-        "anime_id": 35277,
+        "anime_id": 40001,
         "title": "Nanumu no Ie",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/4/84973.jpg",
         "source": "Other",
@@ -44,7 +44,7 @@ const movieJSON = [
         "ending_theme": []
       },
       {
-        "anime_id": 14353,
+        "anime_id": 40002,
         "title": "Death Billiards",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/11/48721.jpg",
         "source": "Original",
@@ -66,7 +66,7 @@ const movieJSON = [
         "ending_theme": []
       },
       {
-        "anime_id": 8154,
+        "anime_id": 40003,
         "title": "Gegege no Kitarou: Saikyou Youkai Gundan! Nippon Jouriku!!",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/5/27356.jpg",
         "source": "Unknown",
@@ -88,7 +88,7 @@ const movieJSON = [
         "ending_theme": []
       },
       {
-        "anime_id": 35594,
+        "anime_id": 40004,
         "title": "Ylion to Callysia",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/8/85786.jpg",
         "source": "Original",

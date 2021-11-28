@@ -1,6 +1,6 @@
 const showJSON = [
     {
-    "anime_id": 11013,
+    "anime_id": 40010,
     "title": "Inu x Boku SS",
     "image_url": "https://myanimelist.cdn-dena.com/images/anime/12/35893.jpg",
     "source": "Manga",
@@ -25,7 +25,7 @@ const showJSON = [
     "ending_theme": ["#1: Nirvana by MUCC (eps 1, 11-12)", "#2: Rakuen no Photograph (楽園のPhotograph) by Soushi Miketsukami (Yuichi Nakamura) (eps 2, 9)", "#3: Kimi wa (君は) by Ririchiyo Shirakiin (Rina Hidaka) (eps 3, 8)", "#4: one way by Banri Watanuki (Takuya Eguchi) & Zange Natsume (Mamoru Miyano) (ep 4)", "#5: SM Hantei Forum (SM判定フォーラム) by Kagerou Shoukiin (Tomokazu Sugita) (ep 5, 10)", "#6: sweets parade by Karuta Roromiya (Kana Hanazawa) (ep 6)", "#7: Taiyou to Tsuki (太陽と月) by Renshou Sorinozuka (Yoshimasa Hosoya) & Nobara Yukinokouji (Youko Hikasa) (ep 7)"]
   },
   {
-    "anime_id": 2104,
+    "anime_id": 40011,
     "title": "Seto no Hanayome",
     "image_url": "https://myanimelist.cdn-dena.com/images/anime/13/58383.jpg",
     "source": "Manga",
@@ -50,7 +50,7 @@ const showJSON = [
     "ending_theme": ["#1: Ashita e no Hikari (明日への光) by Asuka Hinoi (1-13, 26)", "#2: Dan Dan Dan by SUN&LUNAR (eps 14-25)"]
   },
   {
-    "anime_id": 5262,
+    "anime_id": 40012,
     "title": "Shugo Chara!! Doki",
     "image_url": "https://myanimelist.cdn-dena.com/images/anime/11/10645.jpg",
     "source": "Manga",
@@ -75,7 +75,7 @@ const showJSON = [
     "ending_theme": ["#1: Rottara Rottara (ロッタラ ロッタラ) by Buono! (eps 1-17)", "#2: co.no.mi.chi Buono! (eps 18-25)", "#3: MY BOY by Buono! (eps 26-38)", "#4: Take it Easy! by Buono! (eps. 39-50)", "#5: Honto no Jibun (ホントのじぶん) by Buono! (ep 51)"]
   },
   {
-    "anime_id": 721,
+    "anime_id": 40013,
     "title": "Princess Tutu",
     "image_url": "https://myanimelist.cdn-dena.com/images/anime/13/32209.jpg",
     "source": "Original",
@@ -100,7 +100,7 @@ const showJSON = [
     "ending_theme": ["Watashi No Ai Wa Chiisaikeredo by Ritsuko Okazaki"]
   },
   {
-    "anime_id": 12365,
+    "anime_id": 40014,
     "title": "Bakuman. 3rd Season",
     "image_url": "https://myanimelist.cdn-dena.com/images/anime/6/41845.jpg",
     "source": "Manga",

@@ -1,6 +1,6 @@
 const specialJSON = [
     {
-        "anime_id": 13247,
+        "anime_id": 40015,
         "title": "Lupin III: Lupin Ikka Seizoroi",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/2/46379.jpg",
         "source": "Unknown",
@@ -23,7 +23,7 @@ const specialJSON = [
         "ending_theme": []
       },
       {
-        "anime_id": 12447,
+        "anime_id": 40016,
         "title": "Ben-To Picture Drama",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/13/34953.jpg",
         "source": "Light novel",
@@ -46,7 +46,7 @@ const specialJSON = [
         "ending_theme": []
       },
       {
-        "anime_id": 1381,
+        "anime_id": 40017,
         "title": "Seikai no Monshou Special",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/9/2753.jpg",
         "source": "Light novel",
@@ -69,7 +69,7 @@ const specialJSON = [
         "ending_theme": []
       },
       {
-        "anime_id": 8022,
+        "anime_id": 40018,
         "title": "Tegamibachi Gakuen",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/4/19573.jpg",
         "source": "Original",
@@ -92,7 +92,7 @@ const specialJSON = [
         "ending_theme": []
       },
       {
-        "anime_id": 20667,
+        "anime_id": 40019,
         "title": "Mobile Suit Gundam: Zeonic Front - Indignation of Zeon.",
         "image_url": "https://myanimelist.cdn-dena.com/images/anime/2/54731.jpg",
         "source": "Unknown",

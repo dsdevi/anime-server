@@ -34,10 +34,10 @@ const createMovies = (i) => {
       newMovie
       .save()
       .then((data) => {
-          console.log("added movie "+i+": "+data.title);
+          console.log("added movie "+(i+1)+"/5: "+data.title)
       })
       .catch((err) => {
-          console.log("could not add movie "+i);
+          console.log("could not add movie "+(i+1)+"/5: "+err.message);
       });
 };
 const createOvas = (i) => {
@@ -67,8 +67,8 @@ const createOvas = (i) => {
     
       newOVA
         .save()
-        .then((data) => console.log("added ova "+i+": "+data.title))
-        .catch((err) => console.log("could not add ova "+i));
+        .then((data) => console.log("added ova "+(i+1)+"/5: "+data.title))
+        .catch((err) => console.log("could not add ova "+(i+1)+"/5: "+err.message));
 };
 const createShows = (i) => {
     const newShow = new Show({
@@ -99,8 +99,8 @@ const createShows = (i) => {
     
       newShow
         .save()
-        .then((data) => console.log("added show "+i+": "+data.title))
-        .catch((err) => console.log("could not add show "+i));
+        .then((data) => console.log("added show "+(i+1)+"/5: "+data.title))
+        .catch((err) => console.log("could not add show "+(i+1)+"/5: "+err.message));
 };
 
 const createSpecials = (i) => {
@@ -129,8 +129,8 @@ const createSpecials = (i) => {
 	});
 
 	newSpecial.save()
-    .then((data) => console.log("added special "+i+": "+data.title))
-    .catch((err) => console.log("could not add special "+i));
+    .then((data) => console.log("added special "+(i+1)+"/5: "+data.title))
+    .catch((err) => console.log("could not add special "+(i+1)+"/5: "+err.message));
 };
 const autoCreate = (i) => {
     createMovies(i);
