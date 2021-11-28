@@ -52,10 +52,18 @@ router.get("/:title", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-//FILTER WHERE RATING > X
+//FILTER WHERE SCORE > X
 
-router.get("/:rating", (req, res) => {
-  OVA.find({ rating: { $gte: req.params.rating } })
+router.get("/:score", (req, res) => {
+  OVA.find({ score: { $gte: req.params.score } }) 
+    .then((data) => res.json(data))
+    .catch((err) => res.json(err));
+});
+
+//FILTER BY STUDIO
+
+router.get("/:studio", (req, res) => {
+  OVA.find({ studio: req.params.studio })
     .then((data) => res.json(data))
     .catch((err) => res.json(err));
 });
